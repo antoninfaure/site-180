@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>180°C</title>
-    <link>https://antoninfaure.github.io/180site/</link>
+    <link>https://antoninfaure.github.io/site-180/</link>
     <description>Recent content on 180°C</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Nov 2022 18:56:20 +0100</lastBuildDate><atom:link href="https://antoninfaure.github.io/180site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 18:56:20 +0100</lastBuildDate><atom:link href="https://antoninfaure.github.io/site-180/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fringale</title>
-      <link>https://antoninfaure.github.io/180site/fringale/</link>
+      <link>https://antoninfaure.github.io/site-180/fringale/</link>
       <pubDate>Sun, 20 Nov 2022 18:56:20 +0100</pubDate>
       
-      <guid>https://antoninfaure.github.io/180site/fringale/</guid>
+      <guid>https://antoninfaure.github.io/site-180/fringale/</guid>
       <description>&lt;p&gt;On ne le présente plus : Fringale est un livre de recettes fait par et pour les étudiants. Ce livre est le projet phare de l’Association.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Le Crieur débarque !</title>
-      <link>https://antoninfaure.github.io/180site/posts/crieur-out/</link>
+      <link>https://antoninfaure.github.io/site-180/posts/crieur-out/</link>
       <pubDate>Sun, 20 Nov 2022 18:56:20 +0100</pubDate>
       
-      <guid>https://antoninfaure.github.io/180site/posts/crieur-out/</guid>
+      <guid>https://antoninfaure.github.io/site-180/posts/crieur-out/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor
@@ -30,19 +30,19 @@ Sed velit dignissim sodales ut eu sem.&lt;/p&gt;</description>
     
     <item>
       <title>Fringale</title>
-      <link>https://antoninfaure.github.io/180site/posts/fringale/</link>
+      <link>https://antoninfaure.github.io/site-180/posts/fringale/</link>
       <pubDate>Sun, 20 Nov 2022 18:09:20 +0100</pubDate>
       
-      <guid>https://antoninfaure.github.io/180site/posts/fringale/</guid>
+      <guid>https://antoninfaure.github.io/site-180/posts/fringale/</guid>
       <description>&lt;p&gt;On ne le présente plus : Fringale est un livre de recettes fait par et pour les étudiants.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Tibits</title>
-      <link>https://antoninfaure.github.io/180site/crieur/tibits/</link>
+      <link>https://antoninfaure.github.io/site-180/crieur/tibits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://antoninfaure.github.io/180site/crieur/tibits/</guid>
+      <guid>https://antoninfaure.github.io/site-180/crieur/tibits/</guid>
       <description>Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c&amp;rsquo;est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la suite pour leur originalité et leur qualité.</description>
     </item>
     

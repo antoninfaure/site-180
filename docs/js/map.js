@@ -82,7 +82,7 @@ markers1 = [
     ['0', `
     <div style="font-size:12px; color:#000;">
       <h6 class="mt-2 mb-4">Tibits</h6>
-      <a class="menu-primary mt-4" href="https://antoninfaure.github.io/180site/crieur/tibits">Voir</a>
+      <a class="menu-primary mt-4" href="https://antoninfaure.github.io/site-180/crieur/tibits">Voir</a>
     </div>"'
 
     `, 46.51721188443322, 6.627897207283202, 'Restaurant']
