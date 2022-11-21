@@ -102,6 +102,8 @@ Dans un premier temps il faut créer 2 dossiers au nom du restaurant/bar :
 
 #### Modifier le contenu de la page
 
+
+Exemple de `index.md`
 ```
 title: Nom du restaurant
 layout: single # Ne pas modifier
