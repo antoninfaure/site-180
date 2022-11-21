@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crieur on 180°C</title>
+    <link>https://antoninfaure.github.io/180site/tags/crieur/</link>
+    <description>Recent content in crieur on 180°C</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Nov 2022 18:56:20 +0100</lastBuildDate><atom:link href="https://antoninfaure.github.io/180site/tags/crieur/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Le Crieur débarque !</title>
+      <link>https://antoninfaure.github.io/180site/posts/crieur-out/</link>
+      <pubDate>Sun, 20 Nov 2022 18:56:20 +0100</pubDate>
+      
+      <guid>https://antoninfaure.github.io/180site/posts/crieur-out/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor
+aliquam nulla facilisi cras fermentum odio. A erat nam at lectus urna duis.
+Sed velit dignissim sodales ut eu sem.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

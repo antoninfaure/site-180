@@ -1,0 +1,218 @@
+{{ define "main"}}
+    <!-- == BANNER 1 == -->
+    <div class="container col-12 banner banner-1">
+      <div class="wave-container">
+        <div class="hero mx-5 my-3 p-4">
+          <div class="col-12 p-3 text-center">
+            <h1 class="display-5 fw-bold lh-1 mb-3">L'Association</h1>
+            <p>{{ .Content }}</p>
+          </div>
+        </div>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 120 1440 180"><path fill="#FFF" fill-opacity="1" d="M0,192L80,197.3C160,203,320,213,480,224C640,235,800,245,960,229.3C1120,213,1280,171,1360,149.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+      </div>
+    </div>
+
+
+    <!-- == COMITE 22-23 == -->
+    <div class="col-12 p-0 m-0" style="background-color: #FFF; color: black;">
+      <div class="container col-12 px-6 text-center">
+        <h1>Comité 2022-2023</h1>
+        {{ range first 1 (where .Params.poles "name" "comite") }}
+          <p>{{.description}}</p>
+        {{ end }}
+        <div class="row justify-content-center">
+          {{ range .Params.members }}
+          {{ if in .pole "comite" }}
+          <div class="col-12 col-md-6 col-lg-3 my-2">
+            <div class="card shadow-sm card-dark">
+              {{ with resources.Get .photo }}
+                {{ $image := .Resize "500x" }}
+                <img src="{{ $image.Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              <div class="card-body text-center">
+                <h4 class="ml-1">
+                  <a href="{{ .link }}">
+                    {{ .name }}
+                  </a>
+                </h4>
+                <h5>{{ .title }}</h5>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- == POLE CREATION == -->
+    <div class="col-12 p-0 m-0" style="background-color: #EE323E; color: white;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1440 170"><path fill="#FFF" fill-opacity="1" d="M0,224L80,224C160,224,320,224,480,208C640,192,800,160,960,165.3C1120,171,1280,213,1360,234.7L1440,256L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      <div class="container col-12 px-6 text-center">
+        <h1>Pôle Création</h1>
+        {{ range first 1 (where .Params.poles "name" "creation") }}
+          <p>{{.description}}</p>
+        {{ end }}
+        <div class="row justify-content-center m-0 p-0">
+          {{ range .Params.members }}
+          {{ if in .pole "creation" }}
+          <div class="col-12 col-md-6 col-lg-3 my-2">
+            <div class="card shadow-sm">
+              {{ with resources.Get .photo }}
+                {{ $image := .Resize "500x" }}
+                <img src="{{ $image.Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              <div class="card-body text-center">
+                <h4 class="ml-1">
+                  <a href="{{ .link }}">
+                    {{ .name }}
+                  </a>
+                </h4>
+                <h5>{{ .title }}</h5>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- == POLE EVENT == -->
+    <div class="col-12 p-0 m-0" style="background-color: #FFF; color: black;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 70 1440 180"><path fill="#EE323E" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,133.3C640,128,800,96,960,106.7C1120,117,1280,171,1360,197.3L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      <div class="container col-12 px-6 text-center">
+        <h1>Pôle Événementiel</h1>
+        {{ range first 1 (where .Params.poles "name" "evenementiel") }}
+          <p>{{.description}}</p>
+        {{ end }}
+        <div class="row justify-content-center m-0 p-0">
+
+          {{ range .Params.members }}
+          {{ if in .pole "evenementiel" }}
+          <div class="col-12 col-md-6 col-lg-3 my-2">
+            <div class="card shadow-sm card-dark">
+              {{ with resources.Get .photo }}
+                {{ $image := .Resize "500x" }}
+                <img src="{{ $image.Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              <div class="card-body text-center">
+                <h4 class="ml-1">
+                  <a href="{{ .link }}">
+                    {{ .name }}
+                  </a>
+                </h4>
+                <h5>{{ .title }}</h5>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+
+    <!-- == POLE COMMUNICATION == -->
+    <div class="col-12 p-0 m-0" style="background-color: #EE323E; color: white;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 100 1440 150"><path fill="#FFF" fill-opacity="1" d="M0,192L80,181.3C160,171,320,149,480,154.7C640,160,800,192,960,197.3C1120,203,1280,181,1360,170.7L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      <div class="container col-12 px-6 text-center">
+        <h1>Pôle Communication</h1>
+        {{ range first 1 (where .Params.poles "name" "communication") }}
+          <p>{{.description}}</p>
+        {{ end }}
+        <div class="row justify-content-center m-0 p-0">
+
+          {{ range .Params.members }}
+          {{ if in .pole "communication" }}
+          <div class="col-12 col-md-6 col-lg-3 my-2">
+            <div class="card shadow-sm">
+              {{ with resources.Get .photo }}
+                {{ $image := .Resize "500x" }}
+                <img src="{{ $image.Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              <div class="card-body text-center">
+                <h4 class="ml-1">
+                  <a href="{{ .link }}">
+                    {{ .name }}
+                  </a>
+                </h4>
+                <h5>{{ .title }}</h5>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+
+    <!-- == POLE SPONSORING == -->
+    <div class="col-12 p-0 m-0 pb-5" style="background-color: #FFF; color: black;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150"><path fill="#EE323E" fill-opacity="1" d="M0,64L80,64C160,64,320,64,480,64C640,64,800,64,960,74.7C1120,85,1280,107,1360,117.3L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      <div class="container col-12 px-6 text-center">
+        <h1>Pôle Sponsoring</h1>
+        {{ range first 1 (where .Params.poles "name" "sponsoring") }}
+          <p>{{.description}}</p>
+        {{ end }}
+        <div class="row justify-content-center m-0 p-0">
+          {{ range .Params.members }}
+          {{ if in .pole "sponsoring" }}
+          <div class="col-12 col-md-6 col-lg-3 my-2">
+            <div class="card shadow-sm card-dark">
+              {{ with resources.Get .photo }}
+                {{ $image := .Resize "500x" }}
+                <img src="{{ $image.Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              <div class="card-body text-center">
+                <h4 class="ml-1">
+                  <a href="{{ .link }}">
+                    {{ .name }}
+                  </a>
+                </h4>
+                <h5>{{ .title }}</h5>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+
+    <style type="text/css">
+      .card a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .card a:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
+      .banner-1::before {
+        background-image: url('{{ (resources.Get "images/banner2.jpg").Permalink }}');
+        opacity: 0.7;
+      }
+      .card {
+        border:  0px;
+        border-radius: 20px;
+        background-color: white;
+        color: black;
+      }
+      .card-dark {
+        opacity: 1;
+        background-color: #444547;
+        color: white;
+      }
+      .card img {
+        border:  0px;
+        border-radius: 20px 20px 0 0 ;
+      }
+    </style>
+{{ end }}

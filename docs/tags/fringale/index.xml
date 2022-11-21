@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fringale on 180°C</title>
+    <link>https://antoninfaure.github.io/180site/tags/fringale/</link>
+    <description>Recent content in fringale on 180°C</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Nov 2022 18:09:20 +0100</lastBuildDate><atom:link href="https://antoninfaure.github.io/180site/tags/fringale/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fringale</title>
+      <link>https://antoninfaure.github.io/180site/posts/fringale/</link>
+      <pubDate>Sun, 20 Nov 2022 18:09:20 +0100</pubDate>
+      
+      <guid>https://antoninfaure.github.io/180site/posts/fringale/</guid>
+      <description>&lt;p&gt;On ne le présente plus : Fringale est un livre de recettes fait par et pour les étudiants.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

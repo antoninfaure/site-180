@@ -1,0 +1,44 @@
+{
+	"baseURL": "https://antoninfaure.github.io/180site/",
+	"params": {
+ 		"AuthorName": "Antonin Faure",
+ 		"instagram": "https://www.instagram.com/epfl_180c/",
+  		"telegram": "https://t.me/news_180C",
+  		"linkedin": "https://www.linkedin.com/company/epfl180c/"
+ 	},
+ 	"publishdir": "docs",
+	"defaultContentLanguage": "fr",
+	"title": "180°C",
+	"menu": {
+		"main": [
+			{
+				"pageRef": "/",
+				"name": "Accueil",
+				"url": "/",
+				"weight": 1
+			}, {
+				"pageRef": "crieur",
+				"name": "Le Crieur",
+				"url": "/crieur/",
+				"weight": 2
+			}, {
+				"pageRef": "fringale",
+				"name": "Fringale",
+				"url": "/fringale/",
+				"weight": 3
+			}, {
+				"pageRef": "association",
+				"name": "Association",
+				"url": "/association/",
+				"weight": 4
+			}, {
+				"pageRef": "posts",
+				"name": "Actualités",
+				"url": "/posts/",
+				"weight": 5
+			}
+		]
+	}
+}
+
+

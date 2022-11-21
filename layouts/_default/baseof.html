@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <header class="py-3 shadow w-100">
+            {{- partial "header.html" . -}}
+        </header>
+        <main>
+            <div class="main row m-0">
+            {{- block "main" . }}{{- end }}
+            </div>
+        </main>
+        <footer>
+            {{- partial "footer.html" . -}}
+        </footer>
+    </body>
+</html>
