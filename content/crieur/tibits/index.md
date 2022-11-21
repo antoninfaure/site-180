@@ -71,4 +71,4 @@ tops:
   price: CHF 4.60.- par 100 gr
 ---
 
-Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c'est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la suite pour leur originalité et leur qualité.
+Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c'est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la Suisse pour leur originalité et leur qualité.
