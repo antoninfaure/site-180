@@ -6,12 +6,36 @@
     <description>Recent content on 180°C</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://antoninfaure.github.io/site-180/crieur/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://antoninfaure.github.io/site-180/crieur/tom-caf%C3%A9-mus%C3%A9e-olympique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antoninfaure.github.io/site-180/crieur/tom-caf%C3%A9-mus%C3%A9e-olympique/</guid>
+      <description>title: Tom Café (musée olympique) layout: single # Ne pas modifier banner: images/crieur/nom-du-restaurant/nom-image.jpeg adresse: Quai d&amp;rsquo;Ouchy 1, 1006 Lausanne types: # Lister les types correspondants à l&amp;rsquo;établissement
+restaurant
+bar
+cafe style: Style du restaurant takeaway: true # Pas obligatoire vege: true # Pas obligatoire vegan: true # Pas obligatoire tips: Il y plat du jour à un prix avantageux + un snack-bar qui propose des plats et des boissons à déguster sur place ou à emporter (moins chers) price: ~25 CHF front: images/crieur/nom-du-restaurant/image2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://antoninfaure.github.io/site-180/crieur/tom_cafe_olympique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antoninfaure.github.io/site-180/crieur/tom_cafe_olympique/</guid>
+      <description>title: Tom Café (musée olympique) layout: single # Ne pas modifier banner: images/crieur/nom-du-restaurant/nom-image.jpeg adresse: Quai d&amp;rsquo;Ouchy 1, 1006 Lausanne types: # Lister les types correspondants à l&amp;rsquo;établissement
+restaurant
+bar
+cafe style: Style du restaurant takeaway: true # Pas obligatoire vege: true # Pas obligatoire vegan: true # Pas obligatoire tips: Il y plat du jour à un prix avantageux + un snack-bar qui propose des plats et des boissons à déguster sur place ou à emporter (moins chers) price: ~25 CHF front: images/crieur/nom-du-restaurant/image2.</description>
+    </item>
+    
+    <item>
       <title>Tibits</title>
       <link>https://antoninfaure.github.io/site-180/crieur/tibits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://antoninfaure.github.io/site-180/crieur/tibits/</guid>
-      <description>Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c&amp;rsquo;est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la suite pour leur originalité et leur qualité.</description>
+      <description>Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c&amp;rsquo;est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la Suisse pour leur originalité et leur qualité.</description>
     </item>
     
   </channel>
