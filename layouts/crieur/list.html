@@ -12,9 +12,32 @@
 <!-- == CONTAINER 1 == -->
 <div class="col-12 p-0 m-0" style="background-color: #FFF; color: black;">
   <div class="container col-12 px-6 py-4 text-center">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    {{ .Content }}
     <div class="col-12 py-4 m-0">
       <div id="map"></div>
+    </div>
+    <div class="row m-0" style="overflow-x: scroll;">
+      {{ range ( where .Site.RegularPages "Type" "crieur" ) }}
+      <div class="col-12 col-md-6 col-lg-4 m-0 p-4">
+        <a href="{{ .Permalink }}">
+          <div class="card shadow-sm">
+            {{ $thumbnail := "none" }}
+            {{ if isset .Params "banner" }} {{ $thumbnail = .Params.banner}} {{ end }}
+            {{ if isset .Params "front" }} {{ $thumbnail = .Params.front }} {{ end }}
+            {{ if eq $thumbnail "none"}}
+            {{ else}}
+              {{ with (resources.Get $thumbnail).Fill "800x800" }}
+              <img src="{{ .Permalink }}" class="img-fluid card-img-top ">
+              {{ end }}
+            {{ end}}
+            <div class="card-body p-4">
+              <h4 class="ml-1">{{ .Title }}</h4>
+              <h6>{{ .Params.style }}</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      {{ end }}
     </div>
   </div>
 </div>
@@ -52,6 +75,11 @@
     margin-bottom: 0;
     font-weight: 800;
     text-shadow: 0 0 4px #000;
+  }
+
+  a:has(> .card) {
+    text-decoration: none;
+    color: inherit;
   }
 </style>
 

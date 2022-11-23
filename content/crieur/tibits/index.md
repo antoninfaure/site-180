@@ -1,5 +1,6 @@
 ---
 title: Tibits
+type: crieur
 layout: single
 banner: images/crieur/tibits/tibits-banner.jpeg
 adresse: Pl. de la Gare 11, 1003 Lausanne
@@ -8,9 +9,10 @@ types:
 - bar
 - cafe
 style: Buffet végétarien/vegan
-takeaway: true
-vege: true
-vegan: true
+features:
+- takeaway
+- vege
+- vegan
 tips: Prendre une boîte recircle sur too good to go à 8.90 chf, elles sont bien remplies et peuvent faire deux repas selon votre apétit. Parfois ils offrent même des smoothies, des desserts ou des sandwiches avec.
 price: ~25 CHF
 front: images/crieur/tibits/tibits-front.jpg

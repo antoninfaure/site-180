@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>180°C</title>
+    <title>Le Crieur on 180°C</title>
     <link>https://antoninfaure.github.io/site-180/crieur/</link>
-    <description>Recent content on 180°C</description>
+    <description>Recent content in Le Crieur on 180°C</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://antoninfaure.github.io/site-180/crieur/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brasserie du château</title>
+      <link>https://antoninfaure.github.io/site-180/crieur/brasserie-du-chateau/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antoninfaure.github.io/site-180/crieur/brasserie-du-chateau/</guid>
+      <description>Super brasserie au coeur de Lausanne. Le bar est ouvert toute la semaine et il y a beaucoup de choix de bières. Les pizzas maison sont aussi très sympa ! Bon endroit pour se retrouver entre potes pour décompresser après une longue semaine ;)</description>
+    </item>
+    
+    <item>
+      <title>Slice Pizza</title>
+      <link>https://antoninfaure.github.io/site-180/crieur/slice-pizza/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antoninfaure.github.io/site-180/crieur/slice-pizza/</guid>
+      <description>Pizzeria très bonne et aux prix très honnêtes pour la qualité. Petit bonus, ils ont un point de livraison à Chavannes donc c&amp;rsquo;est idéal pour des livraisons à l&amp;rsquo;EPFL.</description>
+    </item>
+    
     <item>
       <title>Tibits</title>
       <link>https://antoninfaure.github.io/site-180/crieur/tibits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://antoninfaure.github.io/site-180/crieur/tibits/</guid>
-      <description>Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c&amp;rsquo;est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la suite pour leur originalité et leur qualité.</description>
+      <description>Cette chaîne de restaurants végétariens ou vegan est dans le Guiness World Record car c&amp;rsquo;est le premier restaurant végétarien au monde qui a ouvert ses portes à Zurich. Leur délicieux buffets sont maintenant réputés à travers la Suisse pour leur originalité et leur qualité.</description>
+    </item>
+    
+    <item>
+      <title>Tom Café</title>
+      <link>https://antoninfaure.github.io/site-180/crieur/tom-cafe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://antoninfaure.github.io/site-180/crieur/tom-cafe/</guid>
+      <description>Le TOM café se trouve au dernier étage du Musée olympique. Ambiance contemporaine et déco à l&amp;rsquo;image des JO. Il dispose d&amp;rsquo;une grande terrasse offrant une vue spectaculaire sur le lac Léman. Le menu change au fil des saisons, les plats sont de qualités à des prix raisonnables</description>
     </item>
     
   </channel>

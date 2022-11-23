@@ -15,39 +15,42 @@
 <div class="col-12 p-0 m-0" style="background-color: #FFF; color: black;">
   <div class="container col-12 px-5 py-4">
     <div class="row m-0 p-0">
-      {{ if .Params.front }}
-      <div class="col-12 {{ if .Params.front }}col-lg-6{{ end }} p-3 text-left">
-        <h1 class="d-inline mb-0 title">{{ range .Params.links }}{{ if eq .social "site" }}<a href="{{ .url }}" target="_blank">{{ $page.Title }}</a>{{end}}{{end}}</h1>
+      <div class="col-12 {{ if .Params.front }}col-lg-7{{ end }} p-3 text-left">
+        {{ $site := "none" }}
+        {{ range .Params.links }}{{ if eq .social "site" }} {{$site = .url }}{{ end }}{{ end }}
+        <h1 class="d-inline mb-0 title">{{ if eq $site "none" }}{{ $page.Title }}{{else}}<a href="{{ $site }}" target="_blank">{{ $page.Title }}</a>{{end}}</h1>
         <h3 style="margin-top: -10px;" class="mb-0">{{ .Params.style }}</h3>
         <!-- Types -->
         {{ if isset .Params "types" }}
-          <div class="mb-2">
+          <div class="mb-0">
             {{ if in .Params.types "restaurant" }}<span class="type"><i class="fas fa-utensils"></i> Restaurant</span>{{ end }}
             {{ if in .Params.types "bar" }}<span class="type"><i class="fas fa-glass-martini-alt"></i> Bar</span>{{ end }}
             {{ if in .Params.types "cafe" }}<span class="type"><i class="fas fa-coffee"></i> Café</span>{{ end }}
             {{ if in .Params.types "fastfood" }}<span class="type"><i class="fas fa-hamburger"></i> Fast Food</span>{{ end}}
           </div>
         {{ end }}
-        <!-- Tags -->
         <div class="tags">
-          <span class="badge rounded-pill bg-dark">
-            <i class="fas fa-coins" title="Prix moyen"></i> {{ .Params.price }}
-          </span>
-          {{ if .Params.vegan }}
+        <span class="badge rounded-pill bg-danger my-2" style="font-size: .8em;">
+          <i class="fas fa-coins" title="Prix moyen"></i> {{ .Params.price }}
+        </span>
+        <!-- Tags -->
+        {{ if isset .Params "features" }}
+          {{ if in .Params.features "vegan" }}
           <span class="badge rounded-pill bg-dark mt-0 mb-3">
             <i class="fas fa-seedling" title="Vegan"></i> Vegan
           </span>
           {{ end}}
-          {{ if .Params.vege }}
+          {{ if in .Params.features "vege" }}
           <span class="badge rounded-pill bg-dark mt-0 mb-3">
             <i class="fas fa-leaf" title="Végétarien"></i> Végétarien
           </span>
           {{ end}}
-          {{ if .Params.takeaway }}
+          {{ if in .Params.features "takeaway" }}
           <span class="badge rounded-pill bg-dark">
             <i class="fas fa-shipping-fast" title="Takeaway"></i> Takeaway
           </span>
           {{ end }}
+        {{ end }}
         </div>
         <div class="text-justify">
           {{ .Content }}
@@ -61,11 +64,10 @@
         </div>
         {{ end }}
       </div>
-      {{ end }}
 
 
       {{ if .Params.front }}
-      <div class="col-12 col-lg-6 px-3 m-0 mb-3">
+      <div class="col-12 col-lg-5 px-3 m-0 mb-3">
         {{ with resources.Get .Params.front }}
         <img src="{{ .Permalink }}" class="float-end img-fluid">
         {{ end }}
