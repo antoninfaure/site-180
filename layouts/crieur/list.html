@@ -16,11 +16,11 @@
     <div class="col-12 py-4 m-0">
       <div id="map"></div>
     </div>
-    <div class="row m-0" style="overflow-x: scroll;">
+    <div class="row m-0" style="overflow-x: scroll; white-space: nowrap; flex-wrap: nowrap; display: block;">
       {{ range ( where .Site.RegularPages "Type" "crieur" ) }}
-      <div class="col-12 col-md-6 col-lg-4 m-0 p-4">
+      <div class="col-12 col-md-6 col-lg-4 m-0 p-4" style="display: inline-block;">
         <a href="{{ .Permalink }}">
-          <div class="card shadow-sm">
+          <div class="card shadow">
             {{ $thumbnail := "none" }}
             {{ if isset .Params "banner" }} {{ $thumbnail = .Params.banner}} {{ end }}
             {{ if isset .Params "front" }} {{ $thumbnail = .Params.front }} {{ end }}
