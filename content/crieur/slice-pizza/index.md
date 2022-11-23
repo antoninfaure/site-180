@@ -12,36 +12,36 @@ features:
 - takeaway
 - vege
 price: ~20 CHF
-map: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10980.636510543509!2d6.6346036!3d46.5247529!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x79332bfa4cd655cb!2sBrasserie%20du%20Ch%C3%A2teau!5e0!3m2!1sfr!2sch!4v1669225335208!5m2!1sfr!2sch
+map: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745.174534783297!2d6.626626433827467!3d46.524448003339494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c2e302b4aa12d%3A0xf9f2c3a32b4bab28!2sSlice%20Pizza%20Lausanne!5e0!3m2!1sfr!2sch!4v1669237963392!5m2!1sfr!2sch
 horaires:
 - id: lundi
   name: Lundi
-  start: 11:00
-  end: 01:00
+  start: 18:00
+  end: 22:30
 - id: mardi
   name: Mardi
-  start: 11:00
-  end: 01:00
+  start: 18:00
+  end: 22:30
 - id: mercredi
   name: Mercredi
-  start: 11:00
-  end: 01:00
+  start: 18:00
+  end: 22:30
 - id: jeudi
   name: Jeudi
-  start: 11:00
-  end: 01:00
+  start: 18:00
+  end: 22:30
 - id: vendredi
   name: Vendredi
-  start: 11:00
-  end: 02:00
+  start: 18:00
+  end: 23:00
 - id: samedi
   name: Samedi
-  start: 11:00
-  end: 02:00
+  start: 18:00
+  end: 22:30
 - id: dimanche
   name: Dimanche
-  start: 17:00
-  end: 01:00
+  start: 18:00
+  end: 22:00
 links:
 - social: site
   url: https://www.slicepizza.ch/?locale=fr-CH

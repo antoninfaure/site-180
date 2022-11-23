@@ -1,5 +1,5 @@
 {{ define "main" }}
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
 <!-- == BANNER 1 == -->
 <div class="container col-12 banner banner-1">
   <div class="wave-container">
@@ -13,74 +13,266 @@
 <div class="col-12 p-0 m-0" style="background-color: #FFF; color: black;">
   <div class="container col-12 px-6 py-4 text-center">
     {{ .Content }}
-    <div class="col-12 py-4 m-0">
-      <div id="map"></div>
-    </div>
-    <div class="row m-0" style="overflow-x: scroll; white-space: nowrap; flex-wrap: nowrap; display: block;">
-      {{ range ( where .Site.RegularPages "Type" "crieur" ) }}
-      <div class="col-12 col-md-6 col-lg-4 m-0 p-4" style="display: inline-block;">
-        <a href="{{ .Permalink }}">
-          <div class="card shadow">
-            {{ $thumbnail := "none" }}
-            {{ if isset .Params "banner" }} {{ $thumbnail = .Params.banner}} {{ end }}
-            {{ if isset .Params "front" }} {{ $thumbnail = .Params.front }} {{ end }}
-            {{ if eq $thumbnail "none"}}
-            {{ else}}
-              {{ with (resources.Get $thumbnail).Fill "800x800" }}
-              <img src="{{ .Permalink }}" class="img-fluid card-img-top ">
-              {{ end }}
-            {{ end}}
-            <div class="card-body p-4">
-              <h4 class="ml-1">{{ .Title }}</h4>
-              <h6>{{ .Params.style }}</h6>
-            </div>
-          </div>
-        </a>
+    <div class="col-12 py-4 m-0" style="height: 100%;">
+      <div id="map" class="w-100" style="position: relative; top: 0"></div>
+      <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
       </div>
-      {{ end }}
     </div>
-  </div>
+    <div class="col-12 p-0 m-0 places">
+      <button class="arrow left-arrow">
+        <div class="text">&#8249;</div>
+      </button>
+      <div class="slider">
+        {{ range ( where .Site.RegularPages "Type" "crieur" ) }}
+        <div class="place">
+          <a href="{{ .Permalink }}">
+            <div class="card shadow">
+              {{ $thumbnail := "none" }}
+              {{ if isset .Params "banner" }} {{ $thumbnail = .Params.banner}} {{ end }}
+              {{ if isset .Params "front" }} {{ $thumbnail = .Params.front }} {{ end }}
+              {{ if eq $thumbnail "none"}}
+              {{ else}}
+              {{ with (resources.Get $thumbnail).Fill "800x800" }}
+              <img src="{{ .Permalink }}" class="img-fluid card-img-top">
+              {{ end }}
+              {{ end}}
+              <div class="card-body p-4">
+                <h4 class="ml-1">{{ .Title }}</h4>
+                <h6>{{ .Params.style }}</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+      <button class="arrow right-arrow">
+        <div class="text">&#8250;</div>
+      </button>
+    </div>
 </div>
-
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.12/proj4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+<script src="https://epsg.io/21781.js"></script>
+<script src="https://epsg.io/2056.js"></script>
 <script type="text/javascript" src="{{ (resources.Get "js/map.js").Permalink }}"></script>
 <style type="text/css">
-  #map {
-    width: 100%;
-    height: 600px;
-  }
-  #popimg {
+#map {
+  width: 100%;
+  height: 600px;
+}
+#popimg {
   width: 150px;
   height: 120px;
 }
-  .banner-1::before {
-    background-image: url('{{ (resources.Get "images/banner_lausanne.jpg").Permalink }}');
-    opacity: 0.6;
-  }
+.banner-1::before {
+  background-image: url('{{ (resources.Get "images/banner_lausanne.jpg").Permalink }}');
+  opacity: 0.6;
+}
+.banner-1 h1 {
+  font-size: 4rem;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 0;
+  font-weight: 900;
+  text-shadow: 0 0 8px #000;
+}
+@media only screen and (max-width: 710px) {
   .banner-1 h1 {
-    font-size: 4rem;
-    color: white;
-    margin-top: 80px;
-    margin-bottom: 0;
-    font-weight: 900;
-    text-shadow: 0 0 8px #000;
+    margin-top: 40px;
   }
-  @media only screen and (max-width: 710px) {
-    .banner-1 h1 {
-      margin-top: 40px;
-    }
-  }
-  .banner-1 h5 {
-    font-size: 1.5rem;
-    color: white;
-    margin-bottom: 0;
-    font-weight: 800;
-    text-shadow: 0 0 4px #000;
-  }
+}
+.banner-1 h5 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0;
+  font-weight: 800;
+  text-shadow: 0 0 4px #000;
+}
 
-  a:has(> .card) {
-    text-decoration: none;
-    color: inherit;
+.ol-popup {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  bottom: 12px;
+  left: -50px;
+  min-width: 180px;
+}
+.ol-popup:after, .ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+.ol-popup-closer {
+  text-decoration: none;
+  font-size: 1.2em;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+.ol-popup-closer:after {
+  content: "✖";
+}
+#popup-content {
+  padding: 10px;
+}
+
+
+/*.slider {
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  list-style: none;
+  margin: 1rem 0;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-padding-left: 1rem;
+  scroll-snap-type: x mandatory;
+}*/
+
+
+.places {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.slider {
+  display: flex;
+  flex-grow: 1;
+  margin:  0 .25rem;
+  overflow-x: auto;
+  background-color: rgba(238, 50, 62, .05);
+  scrollbar-width: none;
+  scroll-padding-left: .5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.slider .place {
+  flex: 0 0 calc(100% / 4);
+  max-width: calc(100% / 4);
+  padding: .25rem;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.place .card {
+  border-radius: 1.5rem;
+  background: rgba(238, 50, 62, 1);
+  color: white;
+  padding: 0;
+  border: none;
+}
+
+a:has(> .card) {
+  text-decoration: none;
+  color: inherit;
+}
+.card img {
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.places .arrow {
+  border: none;
+  border-radius: 1rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-color: rgba(238, 50, 62, .25);
+  z-index: 10;
+  color: black;
+  margin: 0;
+  width: 3rem;
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+.arrow.right-arrow {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.arrow.left-arrow {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.arrow:hover,
+.arrow:focus {
+  background-color: rgba(238, 50, 62, 1);
+  color: white;
+}
+
+.arrow:hover .text,
+.arrow:focus .text {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1200px) {
+  .slider .place {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
+}
+
+@media only screen and (max-width: 800px) {
+  .slider .place {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
 </style>
+
+<script type="text/javascript">
+  const places_scroller = document.querySelector('.slider');
+  const places_item_size = places_scroller.querySelector('.place').clientWidth;
+
+  document.querySelector('.places .right-arrow').addEventListener('click', scrollToNextPage);
+  document.querySelector('.places .left-arrow').addEventListener('click', scrollToPrevPage);
+
+    // For paginated scrolling, simply scroll the gallery one item in the given
+  // direction and let css scroll snaping handle the specific alignment.
+  function scrollToNextPage() {
+    places_scroller.scrollBy({
+      top: 0,
+      left: places_item_size,
+      behavior: 'smooth'
+    });
+  }
+  function scrollToPrevPage() {
+    places_scroller.scrollBy({
+      top: 0,
+      left: -places_item_size,
+      behavior: 'smooth'
+    });
+  }
+</script>
 
 {{ end }}
