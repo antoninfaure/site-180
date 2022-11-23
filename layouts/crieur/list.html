@@ -21,9 +21,9 @@
       </div>
     </div>
     <div class="col-12 p-0 m-0 places">
-      <button class="arrow left-arrow">
+      <div class="arrow left-arrow">
         <div class="text">&#8249;</div>
-      </button>
+      </div>
       <div class="slider">
         {{ range ( where .Site.RegularPages "Type" "crieur" ) }}
         <div class="place">
@@ -47,9 +47,9 @@
         </div>
         {{ end }}
       </div>
-      <button class="arrow right-arrow">
+      <div class="arrow right-arrow">
         <div class="text">&#8250;</div>
-      </button>
+      </div>
     </div>
 </div>
 </div>
@@ -166,7 +166,7 @@
   overflow-x: auto;
   background-color: rgba(238, 50, 62, .05);
   scrollbar-width: none;
-  scroll-padding-left: .5rem;
+  scroll-padding-left: .25rem;
   scroll-snap-type: x mandatory;
 }
 
