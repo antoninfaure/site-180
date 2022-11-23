@@ -252,11 +252,14 @@ a:has(> .card) {
 
 <script type="text/javascript">
   const places_scroller = document.querySelector('.slider');
-  const places_item_size = places_scroller.querySelector('.place').clientWidth;
+  var places_item_size = places_scroller.querySelector('.place').clientWidth;
 
   document.querySelector('.places .right-arrow').addEventListener('click', scrollToNextPage);
   document.querySelector('.places .left-arrow').addEventListener('click', scrollToPrevPage);
 
+  $( window ).resize(function() {
+    places_item_size = places_scroller.querySelector('.place').clientWidth;
+  });
     // For paginated scrolling, simply scroll the gallery one item in the given
   // direction and let css scroll snaping handle the specific alignment.
   function scrollToNextPage() {

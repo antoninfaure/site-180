@@ -124,6 +124,25 @@
         </div>
         
         <div class="place">
+          <a href="https://antoninfaure.github.io/site-180/crieur/fleur-asie/">
+            <div class="card shadow">
+              
+                
+              
+              
+              
+              <img src="https://antoninfaure.github.io/site-180/images/crieur/fleur-asie/fleur-asie-banner_hu88999c0c6c1741923012712d69a1b5e6_429354_800x800_fill_q75_box_smart1.jpg" class="img-fluid card-img-top">
+              
+              
+              <div class="card-body p-4">
+                <h4 class="ml-1">Fleur d&#39;Asie</h4>
+                <h6>Traiteur vietnamien et supermarché asiatique</h6>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="place">
           <a href="https://antoninfaure.github.io/site-180/crieur/slice-pizza/">
             <div class="card shadow">
               
@@ -375,11 +394,14 @@ a:has(> .card) {
 
 <script type="text/javascript">
   const places_scroller = document.querySelector('.slider');
-  const places_item_size = places_scroller.querySelector('.place').clientWidth;
+  var places_item_size = places_scroller.querySelector('.place').clientWidth;
 
   document.querySelector('.places .right-arrow').addEventListener('click', scrollToNextPage);
   document.querySelector('.places .left-arrow').addEventListener('click', scrollToPrevPage);
 
+  $( window ).resize(function() {
+    places_item_size = places_scroller.querySelector('.place').clientWidth;
+  });
     
   
   function scrollToNextPage() {

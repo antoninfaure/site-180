@@ -18,7 +18,7 @@ const popup_closer = document.getElementById('popup-closer');
 
 var map;
 
-// types : 0 = restaurant, 1 = bar, 2 = café
+// types : 0 = restaurant, 1 = bar, 2 = café, 3 = fast-food, 4 = traiteur, 5 = magasin
 var data = [
     {
         name: "Tibits",
@@ -51,6 +51,14 @@ var data = [
         latitude: 46.5244960525621,
         longitude: 6.631089640669877,
         types: [0]
+    },
+    {
+        name: "Fleur d'Asie",
+        url: './fleur-asie',
+        id: "aaa",
+        latitude: 46.537324926423686,
+        longitude: 6.5779525767144085,
+        types: [4, 5]
     }
 ]
 
